@@ -53,7 +53,7 @@ show('(8) isco\'s segmented image', new_img)
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-faces = face_cascade.detectMultiScale(img, 1.07, 4)
+faces = face_cascade.detectMultiScale(img, 1.09, 4)
 for (x, y, w, h) in faces:
     cv2.rectangle(img, (x, y), (x + w, y + h), (20, 0, 200), 2)
 show('(9) isco\'s face', img)
