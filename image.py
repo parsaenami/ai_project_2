@@ -24,8 +24,8 @@ gauss_gray = cv2.GaussianBlur(img0, (9, 9), 0)
 show('(4) smoothed gaussian filtered gray scale isco', gauss_gray)
 
 rows, cols = img.shape[:2]
-M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 90, 1)
-dst = cv2.warpAffine(img, M, (cols, rows))
+M = cv2.getRotationMatrix2D((cols/2, cols/2), 90, 1)
+dst = cv2.warpAffine(img, M, (rows, cols))
 show('(5) rotated isco', dst)
 
 e = cv2.resize(img, (cols // 2, rows))
